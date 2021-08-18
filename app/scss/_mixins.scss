@@ -1,0 +1,15 @@
+@mixin boxShadowStandard {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@mixin border($color) {
+  border: 1px solid $color;
+}
+
+$breakpoints-up: ("medium": "768px", "large": "968px", "xlarge": "1200px");
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
