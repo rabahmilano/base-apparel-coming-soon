@@ -4,7 +4,7 @@
 
   @include breakpoint-up(xlarge) {
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 1fr auto;
     height: 100vh;
   }
 }
@@ -25,8 +25,8 @@
 
   @include breakpoint-up(xlarge) {
     position: absolute;
-    top: 3rem;
-    left: 8rem;
+    top: 2rem;
+    left: 9rem;
     background: transparent;
     z-index: 1;
   }
@@ -136,15 +136,23 @@
 
   @include breakpoint-up(xlarge) {
     display: flex;
+    background: url(../../images/bg-pattern-desktop.svg) top left no-repeat;
+    background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     text-align: left;
-    margin-top: 0;
+    margin-top: 0rem;
     padding: 0;
 
     &__info {
       padding: 0 11rem;
+      margin-top: 4rem;
+    }
+
+    &__title {
+      font-size: 4rem;
+      line-height: 1.2;
     }
 
     &__text {
@@ -158,8 +166,13 @@
       margin-left: 0;
     }
 
+    &__input {
+      font-size: 17px;
+    }
+
     &__btn {
       width: 100px;
+      height: 56px;
     }
   }
 }
